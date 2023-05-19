@@ -17,6 +17,7 @@ public class DivisibleByThreeThread extends Thread {
     @Override
     public void run() {
         while (true) {
+            value += 1;
             //System.out.println("PZ3: "+ value);
             if (value % 3 == 0 ) {
                 if(value <= sharedValue && value % 2 == 0)
@@ -27,7 +28,7 @@ public class DivisibleByThreeThread extends Thread {
                 {
                     System.out.println("Watek podzielny przez 3: " + value);
                 }
-                value += 3;
+
 
             }
             try {

@@ -15,7 +15,7 @@ public class DivisibleByTwoThread extends Thread {
     @Override
     public void run() {
         while (true) {
-            value +=2;
+            value +=1;
 
             if (value % 2 == 0) {
                 if(value <= sharedValue && value % 3 == 0)
@@ -29,7 +29,7 @@ public class DivisibleByTwoThread extends Thread {
 
             }
             try {
-                Thread.sleep(200);
+                Thread.sleep(400);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
